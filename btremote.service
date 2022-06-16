@@ -1,0 +1,10 @@
+[Unit]
+Description=Bluetooth Remote
+After=multi-user.target
+[Service]
+Type=simple
+WorkingDirectory=/opt/btremote
+Restart=always
+ExecStart=/usr/bin/python3 /opt/btremote/btremote.py
+[Install]
+WantedBy=multi-user.target
